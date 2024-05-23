@@ -63,5 +63,5 @@ app.post('/chat_discord', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server running at https://omega-pi.vercel.app/`);
+    console.log(`Server running at https://omegaproject-public.vercel.app/`);
 });

@@ -118,7 +118,7 @@ gameBot.on('messageCreate', async (message) => {
         userName: message.author.username
       };
   
-      const apiURL = 'https://omega-chatbot-chi.vercel.app/api/chat_discord';
+      const apiURL = 'https://omegaproject-chatbot.vercel.app/api/chat_discord';
   
       try {
         const response = await fetch(apiURL, {
