@@ -233,7 +233,7 @@ function Chat() {
                 <Button
                   as="a"
                   marginTop={-4}
-                  href="https://omega-pi.vercel.app/"
+                  href="https://omegaproject-public.vercel.app/"
                   rightIcon={<Icon as={FaArrowCircleLeft} />}
                   _hover={{ bg: 'hsl(273, 72%, 50%)' }}
                   bg="hsl(262, 100%, 59%)"
