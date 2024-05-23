@@ -1,11 +1,9 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
+
 :root {
   --header-height: 3.5rem;
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
+
   --first-color: hsl(262, 100%, 59%);
   --first-color-alt: hsl(93, 50%, 48%);
   --first-color-light: hsl(273, 72%, 50%);
@@ -20,8 +18,7 @@
                                 hsla(93, 8%, 8%),
                                 rgb(80, 25, 126));
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
+  
   --body-font: "Montserrat", sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
@@ -30,17 +27,17 @@
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
 
-  /*========== Font weight ==========*/
+
   --font-regular: 400;
   --font-semi-bold: 600;
   --font-bold: 700;
 
-  /*========== z index ==========*/
+
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
-/*========== Responsive typography ==========*/
+
 @media screen and (min-width: 1150px) {
   :root {
     --biggest-font-size: 4.25rem;
@@ -52,7 +49,7 @@
   }
 }
 
-/*=============== BASE ===============*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -156,18 +153,18 @@ body {
   /* Questionnaire */
   #questionnaire p {
     font-size: var(--h2-font-size);
-    color: white; /* Changed to white for better contrast */
-    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.85); /* Adds depth and readability */
+    color: white; 
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.85); 
     margin-bottom: 1.5rem;
     font-weight: bold;
     text-align: center;
-    background-image: linear-gradient(to right, #6e48aa, #9d50bb); /* Vibrant gradient background */
+    background-image: linear-gradient(to right, #6e48aa, #9d50bb); 
     width: 100%;
-    padding: 10px 20px; /* Balanced padding */
-    border-radius: 5px; /* Rounded corners for a smooth look */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    display: inline-block; /* Ensures block level but inline for automatic width */
-    margin: 10px 0; /* Margins above and below for spacing */
+    padding: 10px 20px; 
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: inline-block;
+    margin: 10px 0; 
   }
   
   #questionnaire button {
@@ -196,7 +193,7 @@ body {
     margin-top: 10px;
   }
 
-  /* Navigation for mobile devices */
+ 
   @media screen and (max-width: 1150px){
     .nav__menu{
       position: fixed;
@@ -217,7 +214,7 @@ body {
   
   .nav__list{
     display: flex;
-    flex-direction: column; /* This aligns the menu items vertically */
+    flex-direction: column;
     gap: 40px;
   }
   
@@ -332,7 +329,7 @@ body {
     right: 3rem;
   }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -358,7 +355,7 @@ body {
   overflow: hidden;
 }
 
-/* Add blur header */
+
 .blur-header::after{
   content: '';
   position: absolute;
@@ -372,10 +369,10 @@ body {
   z-index: -1;
 }
 
-/*============= QUESTIONNAIRE + RECOMMENDATION =============*/
+
 #questionnaire {
   display: flex;
-  flex-direction: column; /* This aligns items vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -383,9 +380,9 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   padding: 2rem;
-  width: 100%; /* Ensures it takes up the necessary space */
-  max-width: 500px; /* Maximum width to prevent it from becoming too wide */
-  margin: 180px auto 20px; /* Centers the box vertically and horizontally */
+  width: 100%; 
+  max-width: 500px;
+  margin: 180px auto 20px;
   overflow: hidden;
 }
 
@@ -397,13 +394,13 @@ body {
   background-image: linear-gradient(to right, #6e48aa, #9d50bb);
   display: inline-block;
   margin: 10px 0;
-  font-family: 'Montserrat', sans-serif; /* Consistent with the theme */
-  font-weight: 700; /* Bold for emphasis */
-  font-size: 1.5rem; /* Larger size for importance */
-  text-align: center; /* Ensures the text is centered if the line breaks */
-  width: auto; /* Auto width based on content size */
-  max-width: 90%; /* Maximum width to maintain padding and aesthetics */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 700; 
+  font-size: 1.5rem; 
+  text-align: center;
+  width: auto;
+  max-width: 90%; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 #recommendation h2 {
@@ -437,7 +434,7 @@ body {
   margin-top: 20px;
 }
 
-/*=============== SCROLL BAR ===============*/
+
 ::-webkit-scrollbar{
   width: .6rem;
   background-color: hsl(228, 4%, 15%);
@@ -451,7 +448,7 @@ body {
   background-color: hsl(228, 4%, 35%);
 }
 
-/*=============== SCROLL UP ===============*/
+
 .scrollup{
   position: fixed;
   right: 1rem;
@@ -470,13 +467,12 @@ body {
   transform: translateY(-.5rem);
 }
 
-/* Show Scroll Up */
+
 .show-scroll{
   bottom: 3rem;
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
+
 @media screen and (max-width: 320px){
   .container{
     margin-inline: 1rem;
@@ -493,7 +489,7 @@ body {
   }
 }
 
-/* For medium devices */
+
 @media screen and (min-width: 576px){
   .home__container,
   .features__container,
@@ -533,7 +529,8 @@ body {
     justify-content: space-between;
   }
 }
-/* For large devices */
+
+
 @media screen and (min-width: 1150px){
   .container{
     margin-inline: auto;

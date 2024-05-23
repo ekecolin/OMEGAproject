@@ -1,15 +1,11 @@
-// https://react.dev/reference/react/useState
-// https://chakra-ui.com/
 import React, { useState } from "react";
 import { FaArrowCircleLeft, FaArrowAltCircleUp } from "react-icons/fa";
 import { Box, Button, FormControl, FormLabel, Input, Icon, Flex } from "@chakra-ui/react";
 import { handleEnterKeyPress } from "@/utils";
 
-// The NameInput component accepts a single prop: onEnter, a function is run when called with the name value.
 const NameInput = ({ onEnter }: { onEnter: (name: string) => void }) => {
   const [name, setName] = useState("");
 
-  // Function to handle changes in the input field, updating the `name` state.
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
@@ -27,13 +23,13 @@ const NameInput = ({ onEnter }: { onEnter: (name: string) => void }) => {
           })}
           mt={2}
           placeholder="Enter your name"
-          color="white" // Set the text color to white
+          color="white" 
           sx={{
             '::placeholder': {
-              color: 'hsl(228, 8%, 70%)', // Placeholder color
+              color: 'hsl(228, 8%, 70%)', 
             },
-            background: 'transparent', // Optional: if you want the background to be transparent
-            borderColor: 'hsl(262, 100%, 59%)', // Optional: if you want the border color to be white
+            background: 'transparent', 
+            borderColor: 'hsl(262, 100%, 59%)', 
           }}
         />
       </FormControl>

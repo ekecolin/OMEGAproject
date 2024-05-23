@@ -1,11 +1,7 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(262, 100%, 59%);
   --first-color-alt: hsl(93, 50%, 48%);
   --first-color-light: hsl(273, 72%, 50%);
@@ -20,8 +16,7 @@
                                 hsla(93, 8%, 8%),
                                 rgb(80, 25, 126));
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
+
   --body-font: "Montserrat", sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
@@ -30,17 +25,16 @@
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
 
-  /*========== Font weight ==========*/
+
   --font-regular: 400;
   --font-semi-bold: 600;
   --font-bold: 700;
 
-  /*========== z index ==========*/
+
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
-/*========== Responsive typography ==========*/
 @media screen and (min-width: 1150px) {
   :root {
     --biggest-font-size: 4.25rem;
@@ -52,7 +46,6 @@
   }
 }
 
-/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -83,21 +76,21 @@ body {
     text-decoration: none;
   }
 
-/*=============== MAIN CONTENT ===============*/
+
 .main-content {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-bottom: 4rem; /* Adjust based on footer height */
+  padding-bottom: 4rem; 
 }
 
-/*=============== Notes Section ===============*/
+
 .notes {
     display: flex;
     height: 100%;
     flex: 1;
     overflow: auto;
-    margin-bottom: 2rem; /* Adds space between notes and footer */
+    margin-bottom: 2rem;
 }
 
 .notes * {
@@ -134,7 +127,7 @@ body {
 }
 
 .notes__list-item--selected {
-    background: hsl(228, 6%, 8%); /*note box under add */
+    background: hsl(228, 6%, 8%); 
     border-radius: 7px;
     font-weight: bold;
     border: 2px solid hsl(262, 100%, 59%);
@@ -204,14 +197,14 @@ body {
   font-weight: bold;
   padding: 0.75em 0;
   width: 100%;
-  margin-top: 10px; /* Adjust margin-top as needed */
+  margin-top: 10px; 
 }
 
 .delete-button:hover {
   background: hsl(273, 72%, 50%);
 }
 
-/*=============== HEADER ===============*/
+
 .header {
     position: fixed;
     width: 100%;
@@ -221,7 +214,7 @@ body {
     z-index: var(--z-fixed);
   }
   
-/*=============== NAVIGATION ===============*/
+
   .nav{
     position: relative;
     height: var(--header-height);
@@ -304,7 +297,7 @@ body {
   
   .nav__list{
     display: flex;
-    flex-direction: column; /* This aligns the menu items vertically */
+    flex-direction: column; 
     gap: 40px;
   }
   
@@ -327,7 +320,7 @@ body {
     cursor: pointer;
   }
 
-/*=============== Footer ===============*/
+
   .footer{
     padding-block: 4rem 2rem;
     justify-content: space-between;
@@ -420,7 +413,7 @@ body {
     right: 3rem;
   }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -446,7 +439,7 @@ body {
   overflow: hidden;
 }
 
-/* Add blur header */
+
 .blur-header::after{
   content: '';
   position: absolute;
@@ -460,7 +453,7 @@ body {
   z-index: -1;
 }
 
-/*=============== SCROLL BAR ===============*/
+
 ::-webkit-scrollbar{
   width: .6rem;
   background-color: hsl(228, 4%, 15%);
@@ -474,7 +467,7 @@ body {
   background-color: hsl(228, 4%, 35%);
 }
 
-/*=============== SCROLL UP ===============*/
+
 .scrollup{
   position: fixed;
   right: 1rem;
@@ -493,13 +486,12 @@ body {
   transform: translateY(-.5rem);
 }
 
-/* Show Scroll Up */
+
 .show-scroll{
   bottom: 3rem;
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
+
 @media screen and (max-width: 320px){
   .container{
     margin-inline: 1rem;
@@ -516,7 +508,7 @@ body {
   }
 }
 
-/* For medium devices */
+
 @media screen and (min-width: 576px){
   .home__container,
   .features__container,
@@ -530,38 +522,38 @@ body {
   }
 }
 
-/* Small devices (phones) */
+
 @media screen and (max-width: 576px) {
   .notes__sidebar {
-    width: 100%; /* Make the sidebar full-width on smaller devices */
-    padding: 1rem; /* Reduce padding */
+    width: 100%; 
+    padding: 1rem; 
   }
   .notes__preview {
-    padding: 1rem; /* Reduce padding on smaller screens for more space */
+    padding: 1rem;
   }
   .notes__title {
-    font-size: 2rem; /* Smaller font size for note titles */
+    font-size: 2rem;
   }
 
   .notes__body {
-    font-size: 1rem; /* Smaller font size for note content */
+    font-size: 1rem; 
   }
   .notes__add,
   .delete-button {
-    padding: 0.5rem; /* Smaller padding for buttons */
-    font-size: 1rem; /* Smaller font size for button text */
+    padding: 0.5rem; 
+    font-size: 1rem; 
   }
 
   .notes__title,
   .notes__body {
-    padding: 0.5rem; /* Reduce input padding */
+    padding: 0.5rem;
   }
   .notes {
-    flex-direction: column; /* Stack sidebar and main content vertically */
+    flex-direction: column; 
   }
 
 .notes__list-item {
-    margin-bottom: 1rem; /* Add bottom margin for spacing between notes */
+    margin-bottom: 1rem; 
   }
 }
 
@@ -581,7 +573,8 @@ body {
     justify-content: space-between;
   }
 }
-/* For large devices */
+
+
 @media screen and (min-width: 1150px){
   .container{
     margin-inline: auto;

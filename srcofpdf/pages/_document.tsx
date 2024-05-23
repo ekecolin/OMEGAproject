@@ -1,7 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-// This function customizes the HTML document structure of a Next.js application.
-// It defines the root HTML element and specifies what should be included in the head and body of the page.
 export default function Document() {
   return (
     <Html>

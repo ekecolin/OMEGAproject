@@ -1,11 +1,9 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
+
 :root {
   --header-height: 3.5rem;
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
+
   --first-color: hsl(262, 100%, 59%);
   --first-color-alt: hsl(93, 50%, 48%);
   --first-color-light: hsl(273, 72%, 50%);
@@ -20,8 +18,7 @@
                                 hsla(93, 8%, 8%),
                                 rgb(80, 25, 126));
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
+ 
   --body-font: "Montserrat", sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
@@ -30,17 +27,17 @@
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
 
-  /*========== Font weight ==========*/
+
   --font-regular: 400;
   --font-semi-bold: 600;
   --font-bold: 700;
 
-  /*========== z index ==========*/
+
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
-/*========== Responsive typography ==========*/
+
 @media screen and (min-width: 1150px) {
   :root {
     --biggest-font-size: 4.25rem;
@@ -52,7 +49,7 @@
   }
 }
 
-/*=============== BASE ===============*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -89,7 +86,7 @@ img {
   height: auto;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -115,7 +112,7 @@ img {
   overflow: hidden;
 }
 
-/*=============== HEADER & NAV ===============*/
+
 .header {
   position: fixed;
   width: 100%;
@@ -166,7 +163,7 @@ img {
   align-items: center;
 }
 
-/* Navigation for mobile devices */
+
 @media screen and (max-width: 1150px){
   .nav__menu{
     position: fixed;
@@ -205,12 +202,12 @@ img {
   font-size: 1.25rem;
 }
 
-/* Show menu */
+
 .show-menu{
   right: 0;
 }
 
-/* Add blur header */
+
 .blur-header::after{
   content: '';
   position: absolute;
@@ -229,7 +226,7 @@ img {
   color: var(--first-color);
 }
 
-/*=============== HOME ===============*/
+
 .home__container{
   padding-top: 2.5rem;
   row-gap: 2rem;
@@ -270,7 +267,7 @@ img {
   gap: 10px;
 }
 
-/*=============== BUTTON ===============*/
+
 .button{
   background-color: var(--white-color);
   color: var(--black-color);
@@ -296,7 +293,7 @@ img {
   transform: translateX(.15rem) rotate(-30deg);
 }
 
-/*=============== FEATURES ===============*/
+
 .features__data{
   text-align: center;
 }
@@ -346,7 +343,7 @@ img {
   transform: translateY(-.5rem);
 }
 
-/*=============== BENEFITS ===============*/
+
 .benefits__container{
   padding-top: 2rem;
   row-gap: 2rem;
@@ -382,7 +379,7 @@ img {
   margin-top: 4%;
 }
 
-/*=========== ADD OMEGA + SHARE LINK ==========*/
+
 .share__container{
   padding-top: 2rem;
   row-gap: 2rem;
@@ -420,11 +417,11 @@ img {
   font-style: normal;
 }
 
-/*=============== SHARE BUTTON ===============*/
+
 .share-button{
   width: 200px;
   height: 55px;
-  background: var(--container-color); /* Adjusted to use variable */
+  background: var(--container-color); 
   border-radius: 40px;
   display: flex;
   align-items: center;
@@ -437,15 +434,15 @@ img {
 }
 
 .share-button:hover{
-  background-color: var(--first-color); /* Highlight effect on hover */
+  background-color: var(--first-color); 
 }
 
 .share-button span{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: var(--first-color); /* Adjusted to use variable */
-  color: var(--white-color); /* Adjusted to use variable */
+  background: var(--first-color); 
+  color: var(--white-color); 
   text-align: center;
   line-height: 55px;
   z-index: 999;
@@ -459,26 +456,26 @@ img {
 }
 
 .share-button a {
-  background: transparent; /* Makes the background of the links transparent */
+  background: transparent; 
   flex: 1;
   justify-content: center;
   transform: translateX(-100%);
   transition: transform 0.6s ease-in-out, opacity 0.3s ease;
 }
 
-/* Adjust the span that wraps the icons to create a smaller circle */
+
 .share-button a span {
-  width: 40px; /* Smaller width for the circle */
-  height: 40px; /* Smaller height for the circle */
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--first-color); /* Background color for the circle */
-  margin-right: 10px; /* Adjusts spacing between the icon and text */
+  background: var(--first-color); 
+  margin-right: 10px; 
 }
 
 .share-button a i {
-  font-size: 28px; /* Decrease the font size to make icons smaller */
+  font-size: 28px; 
 }
 
 .share-button:hover a{
@@ -503,7 +500,7 @@ img {
 }
 
 
-/*=============== CONTACT ===============*/
+
 .contact__container{
   padding-top: 2rem;
   row-gap: 2rem;
@@ -542,7 +539,7 @@ img {
   font-style: normal;
 }
 
-/*============ FEEDBACK =============*/
+
 .feedback h2{
   font-size: var(--h1-font-size);
   color: var(--title-color);
@@ -635,7 +632,7 @@ form button:hover{
   animation: shake 0.5s ease-in-out;
 }
 
-/*=============== FOOTER ===============*/
+
 .footer{
   padding-block: 4rem 2rem;
 }
@@ -704,7 +701,7 @@ form button:hover{
   font-size: var(--small-font-size);
 }
 
-/*=============== SCROLL BAR ===============*/
+
 ::-webkit-scrollbar{
   width: .6rem;
   background-color: hsl(228, 4%, 15%);
@@ -718,7 +715,7 @@ form button:hover{
   background-color: hsl(228, 4%, 35%);
 }
 
-/*=============== SCROLL UP ===============*/
+
 .scrollup{
   position: fixed;
   right: 1rem;
@@ -737,13 +734,12 @@ form button:hover{
   transform: translateY(-.5rem);
 }
 
-/* Show Scroll Up */
+
 .show-scroll{
   bottom: 3rem;
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
+
 @media screen and (max-width: 320px){
   .container{
     margin-inline: 1rem;
@@ -759,27 +755,27 @@ form button:hover{
     grid-template-columns: max-content;
   }
   .feedback form {
-    width: auto; /* Allows the form to adjust based on the screen size */
-    padding: 0 10px; /* Adjust padding for smaller screens */
+    width: auto; 
+    padding: 0 10px; 
   }
 
   .feedback .input-box,
   .feedback .textarea-field {
-    flex-direction: column; /* Stack input fields vertically */
-    margin: 8px 0; /* Adds some space around inputs for easier interaction */
+    flex-direction: column;
+    margin: 8px 0; 
   }
 
   .feedback .input-field .item{
-    width: 207%; /* Use the full width for input and textarea */
+    width: 207%;
   }
   .feedback .textarea-field .item {
-    width: 100%; /* Use the full width for input and textarea */
+    width: 100%;
   }
 
   .feedback form button {
-    width: 100%; /* Full-width button for better tap target on mobile */
-    padding: 10px 20px; /* Adjust the padding to ensure it's touch-friendly */
-    font-size: 1rem; /* Ensure text within the button is legible */
+    width: 100%; 
+    padding: 10px 20px; 
+    font-size: 1rem; 
   }
 }
 
@@ -799,41 +795,41 @@ form button:hover{
 
 @media screen and (max-width: 576px) {
   .header {
-    padding: 0.5rem; /* Reduce padding on smaller screens */
+    padding: 0.5rem; 
   }
   .feedback form {
-    width: 100%; /* Full width on smaller screens */
-    padding: 0 20px; /* Add some padding for not touching the edges */
+    width: 100%; 
+    padding: 0 20px; 
   }
 
   .input-box {
-    flex-direction: column; /* Stack inputs vertically on smaller screens */
+    flex-direction: column; 
   }
   .feedback .input-field {
-    width: 100%;  /* Use the full width available */
+    width: 100%; 
   }
 
   .input-field {
-    width: 100%; /* Full width for each input field */
-    margin-bottom: 15px; /* Add some space between stacked inputs */
+    width: 100%; 
+    margin-bottom: 15px; 
   }
   .feedback h2 {
-    font-size: 24px; /* Smaller font size for headings */
+    font-size: 24px; 
   }
 
   .field .item {
-    font-size: 14px; /* Adjust text size in input fields for better readability */
+    font-size: 14px;
   }
   form button {
-    width: 100%; /* Full width button makes it easier to tap */
-    padding: 12px; /* Comfortable padding */
-    font-size: 18px; /* Larger font size for readability */
+    width: 100%;
+    padding: 12px; 
+    font-size: 18px; 
   }
   .textarea-field .item {
-    height: 150px; /* Provide enough space for typing messages */
+    height: 150px; 
   }
   .feedback form {
-    margin: 20px auto; /* Center form with vertical margin */
+    margin: 20px auto;
   }
 }
 
@@ -849,7 +845,7 @@ form button:hover{
     transform: translateY(10rem);
   }
   .share-button {
-    width: 200px; /* Smaller width for smaller screens */
+    width: 200px; 
   }
   .footer__container{
     grid-template-columns: repeat(2, max-content);
@@ -859,17 +855,17 @@ form button:hover{
 
 @media screen and (max-width: 768px) {
   .home__title {
-    font-size: 5.5vw; /* Larger on smaller screens for better readability */
+    font-size: 5.5vw; 
   }
   .home__buttons {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    flex-direction: column; 
   }
   .share__container {
-    padding-top: 20px;  /* Adds padding to push content below the navbar */
+    padding-top: 20px; 
   }
 
   .share-button {
-    transform: scale(0.9);  /* Optional: Scale down the button on smaller screens */
+    transform: scale(0.9);  
   }
 }
 
@@ -982,11 +978,11 @@ form button:hover{
   }
 
   .share-button {
-    justify-content: center; /* Center items */
-    padding: 0 0px;  /* Distribute space around items */
+    justify-content: center; 
+    padding: 0 0px; 
   }
   .share-button a {
-    margin: 0 -3px; /* Add some margin between items for spacing */
+    margin: 0 -3px; 
   }
 
   .contact{
