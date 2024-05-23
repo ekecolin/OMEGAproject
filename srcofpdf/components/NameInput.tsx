@@ -34,7 +34,7 @@ const NameInput = ({ onEnter }: { onEnter: (name: string) => void }) => {
         />
       </FormControl>
       <Flex justifyContent="space-between" w="100%" mt={6}>
-          <Button as="a" href="https://omega-pi.vercel.app/" leftIcon={<Icon as={FaArrowCircleLeft} />} _hover={{ bg: 'hsl(273, 72%, 50%)' }} bg="hsl(262, 100%, 59%)" color="white" variant="solid">
+          <Button as="a" href="https://omegaproject-public.vercel.app/" leftIcon={<Icon as={FaArrowCircleLeft} />} _hover={{ bg: 'hsl(273, 72%, 50%)' }} bg="hsl(262, 100%, 59%)" color="white" variant="solid">
             RETURN TO WEBPAGE
           </Button>
           <Button colorScheme="whiteAlpha" h={10} color="white" bg="hsl(262, 100%, 59%)" _hover={{ bg: "hsl(273, 72%, 50%)" }} onClick={() => onEnter(name)} isDisabled={!name.trim()} rightIcon={<Icon as={FaArrowAltCircleUp} />}>
