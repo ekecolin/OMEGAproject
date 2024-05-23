@@ -100,7 +100,7 @@ gameBot.on('messageCreate', async (message) => {
 
 
     if (command === 'start') {
-      // Start typing indicator
+    
       message.channel.sendTyping();
       botStarted = true;
       const userName = message.author.username;
