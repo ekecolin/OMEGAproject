@@ -1,0 +1,649 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(262, 100%, 59%);
+  --first-color-alt: hsl(93, 50%, 48%);
+  --first-color-light: hsl(273, 72%, 50%);
+  --title-color: hsl(228, 8%, 98%);
+  --text-color: hsl(228, 8%, 70%);
+  --white-color: hsl(228, 8%, 98%);
+  --black-color: hsl(228, 6%, 4%);
+  --body-color: hsl(228, 6%, 8%);
+  --container-color: hsl(228, 6%, 12%);
+  --shadow-img: 0 0 48px hsla(258, 89%, 39%, 0.759);
+  --gradient-card: linear-gradient(180deg,
+                                hsla(93, 8%, 8%),
+                                rgb(80, 25, 126));
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.25rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+  
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+  }
+  
+  h1, h2, h3, h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+  }
+  
+  .nav{
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__logo,
+  .nav__close,
+  .nav__toggle,
+  .nav__actions{
+    display: flex;
+    color: var(--title-color);
+    cursor: pointer;
+  }
+  
+  .nav__logo{
+    font-weight: var(--font-semi-bold);
+    column-gap: .25rem;
+    align-items: center;
+  }
+  
+  .nav__logo i{
+    color: var(--first-color);
+    font-size: 1.25rem;
+    font-weight: initial;
+  }
+  
+  .nav__actions{
+    font-size: 1.25rem;
+    column-gap: .5rem;
+    align-items: center;
+  }
+
+  .nav{
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__logo{
+    font-weight: var(--font-semi-bold);
+    column-gap: .25rem;
+    align-items: center;
+  }
+  
+  .nav__logo i{
+    color: var(--first-color);
+    font-size: 1.25rem;
+    font-weight: initial;
+  }
+  
+  .nav__actions{
+    font-size: 1.25rem;
+    column-gap: .5rem;
+    align-items: center;
+  }
+
+  /* Questionnaire */
+  #questionnaire p {
+    font-size: var(--h2-font-size);
+    color: white; /* Changed to white for better contrast */
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.85); /* Adds depth and readability */
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(to right, #6e48aa, #9d50bb); /* Vibrant gradient background */
+    width: 100%;
+    padding: 10px 20px; /* Balanced padding */
+    border-radius: 5px; /* Rounded corners for a smooth look */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    display: inline-block; /* Ensures block level but inline for automatic width */
+    margin: 10px 0; /* Margins above and below for spacing */
+  }
+  
+  #questionnaire button {
+    background: var(--first-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    padding: 0.75em 2em;
+    margin: 10px;
+    cursor: pointer;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  #questionnaire button:hover {
+    background: var(--first-color-light);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  .game-image {
+    max-width: 200px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Navigation for mobile devices */
+  @media screen and (max-width: 1150px){
+    .nav__menu{
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background-color: hsla(228, 24%, 6%, .2);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      width: 80%;
+      height: 100%;
+      padding: 6rem 3rem 0;
+      transition: right .4s;
+    }
+    .show-menu {
+      right: 0; 
+    }
+  }
+  
+  .nav__list{
+    display: flex;
+    flex-direction: column; /* This aligns the menu items vertically */
+    gap: 40px;
+  }
+  
+  .nav__link{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    transition: color 4s;
+    cursor: pointer;
+  }
+  
+  .nav__link:hover{
+    color: var(--first-color);
+  }
+  
+  .nav__close{
+    position: absolute;
+    top: 1.15rem;
+    right: 1.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  .footer{
+    padding-block: 4rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer__logo{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    color: var(--title-color);
+    font-weight: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: .75rem;
+  }
+  
+  .footer__logo i{
+    color: var(--first-color);
+    font-size: 1.5rem;
+    font-weight: initial;
+  }
+  
+  .footer__content{
+    display: flex;
+  }
+  
+  .footer__title{
+    font-size: var(--normal-font-size);
+    margin-bottom: 1rem;
+  }
+  
+  .footer__links{
+    display: grid;
+    row-gap: .75rem;
+  }
+  
+  .footer__link{
+    color: var(--text-color);
+    transition: color .4s;
+  }
+  
+  .footer__social{
+    display: flex;
+    column-gap: .75rem;
+  }
+  
+  .footer__social-link{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color .4s;
+  }
+  
+  .footer__link:hover,
+  .footer__social-link:hover{
+    color: var(--first-color);
+  }
+  
+  .footer__copy{
+    display: block;
+    margin-top: 6rem;
+    text-align: center;
+    font-size: var(--small-font-size);
+  }
+
+  .bottom__button{
+    margin-top: 10%;
+  }
+
+  .footer__logo{
+    margin-bottom: 1.5rem;
+  }
+  .footer__logo i{
+    font-size: 2rem;
+  }
+  .footer__content{
+    column-gap: 5.5rem;
+  }
+  .footer__title{
+    font-size: var(--h3-font-size);
+    margin-bottom: 1.5rem;
+  }
+  .footer__social{
+    column-gap: 1rem;
+  }
+  .footer__copy{
+    margin-top: 7.5rem;
+  }
+  .scrollup{
+    right: 3rem;
+  }
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/* Add blur header */
+.blur-header::after{
+  content: '';
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(228, 24%, 6%, .2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*============= QUESTIONNAIRE + RECOMMENDATION =============*/
+#questionnaire {
+  display: flex;
+  flex-direction: column; /* This aligns items vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--container-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%; /* Ensures it takes up the necessary space */
+  max-width: 500px; /* Maximum width to prevent it from becoming too wide */
+  margin: 180px auto 20px; /* Centers the box vertically and horizontally */
+  overflow: hidden;
+}
+
+#recommendation h2 {
+  color: white;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.85);
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #6e48aa, #9d50bb);
+  display: inline-block;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif; /* Consistent with the theme */
+  font-weight: 700; /* Bold for emphasis */
+  font-size: 1.5rem; /* Larger size for importance */
+  text-align: center; /* Ensures the text is centered if the line breaks */
+  width: auto; /* Auto width based on content size */
+  max-width: 90%; /* Maximum width to maintain padding and aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+}
+
+#recommendation h2 {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#recommendation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  transition: opacity 1s ease;
+  opacity: 0; 
+  margin-top: 20px;
+}
+
+.game-image {
+  width: 100%;  
+  height: auto;
+  max-width: 400px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: .6rem;
+  background-color: hsl(228, 4%, 15%);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: hsl(228, 4%, 25%);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(228, 4%, 35%);
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--container-color);
+  color: var(--title-color);
+  box-shadow: 0 12px 24px hsla(228, 48%, 4%, .5);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s;
+}
+
+.scrollup:hover{
+  transform: translateY(-.5rem);
+}
+
+/* Show Scroll Up */
+.show-scroll{
+  bottom: 3rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px){
+  .container{
+    margin-inline: 1rem;
+  }
+  .home__title{
+    font-size: 2rem;;
+  }
+  .home__buttons{
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  .footer__content{
+    grid-template-columns: max-content;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px){
+  .home__container,
+  .features__container,
+  .benefits__container{
+    grid-template-columns: 400px;
+    justify-content: center;
+  }
+
+  #questionnaire {
+    padding: 2rem 1.5rem;
+  }
+  
+  .footer__content{
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media screen and (min-width: 768px){
+  .nav__menu{
+    width: 50%;
+  }
+  .features__content{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+  }
+  .features__card:nth-child(even){
+    transform: translateY(10rem);
+  }
+  #questionnaire {
+    max-width: 700px;
+  }
+  .game-image {
+    width: 95%; 
+  }
+  .footer__container{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+}
+/* For large devices */
+@media screen and (min-width: 1150px){
+  .container{
+    margin-inline: auto;
+  }
+  .section{
+    padding-block: 7rem 2rem;
+  }
+  .section__title{
+    margin-bottom: 1.5rem;
+  }
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+  }
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+  .nav_logo i{
+    font-size: 1.5rem;
+  }
+  .nav__menu{
+    width: initial;
+  }
+  .nav__list{
+    flex-direction: row;
+    column-gap: 3.5rem;
+  }
+  .nav__actions{
+    font-size: 1.5rem;
+    column-gap: 1rem;
+  }
+
+  #questionnaire {
+    padding: 2rem; 
+    max-width: 800px;
+  }
+
+  .home__container{
+    grid-template-columns: 480px 535px;
+    align-items: center;
+    column-gap: 4rem;
+    padding-top: 4rem;
+  }
+  .home_img{
+    width: 480px;
+  }
+  .home__data{
+    text-align: initial;
+  }
+  .home__description{
+    margin-bottom: 4.5rem;
+  }
+  .home__buttons{
+    justify-content: initial;
+    column-gap: 1.5rem;
+  }
+  .bottom__button{
+    margin-top: 10%;
+  }
+
+  .contact{
+    margin-top: -10rem;
+  }
+
+  .contact__container{
+    grid-template-columns: 480px 385px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8rem;
+    padding: 3rem;
+  }
+  .contact__content{
+    order: 1;
+    text-align: initial;
+    row-gap: 2.5rem;
+  }
+  .contact__title{
+    margin-bottom: 5%;
+  }
+  .contact__social{
+    justify-content: initial;
+    margin-bottom: -5%;
+  }
+  .contact__img{
+    width: 480px;
+  }
+  .bottom__button{
+    margin-top: 10%;
+  }
+
+  .footer__logo{
+    margin-bottom: 1.5rem;
+  }
+  .footer__logo i{
+    font-size: 2rem;
+  }
+  .footer__content{
+    column-gap: 5.5rem;
+  }
+  .footer__title{
+    font-size: var(--h3-font-size);
+    margin-bottom: 1.5rem;
+  }
+  .footer__social{
+    column-gap: 1rem;
+  }
+  .footer__copy{
+    margin-top: 7.5rem;
+  }
+  .scrollup{
+    right: 3rem;
+  }
+}
