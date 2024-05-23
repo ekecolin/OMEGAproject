@@ -13,12 +13,14 @@ Beyond Discord, OMEGA is accessible via a dedicated website that supports both t
 ### Installing
 
 #### PDF to Pinecone
-1. Install `npm install -g ts-node`
-2. Install `npm install pdf-parse`
-3. To execute, run: `ts-node scripts/createIndex.ts
-4. To start on your server, run 'npm run dev'
+1. Go to the srcofpdf folder
+2. Install `npm install -g ts-node`
+3. Install `npm install pdf-parse`
+4. To execute, run: `ts-node scripts/createIndex.ts
+5. To start on your server, run 'npm run dev'
 
-#### Discord bot 
-1. To execute, run: 'node discordgamebot.js'
+#### Discord bot
+1. Open another terminal to run the discod bot
+2. To execute, run: 'node discordgamebot.js'
 
 
